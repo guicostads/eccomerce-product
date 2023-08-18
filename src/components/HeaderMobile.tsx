@@ -9,11 +9,11 @@ const HeaderMobile = () => {
 
     return (
         <div>
-            <div className="w-full p-2 relative">
+            <div className="w-full px-2 py-3 relative">
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                            {isMenuOpen ? '' : 'Open'}
+                            {isMenuOpen ? '' : 'Menu'}
                         </button>
                         <div>
                             <img src={Logo} alt="logo" />

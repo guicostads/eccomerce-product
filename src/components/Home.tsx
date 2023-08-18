@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import ProductCarousel from "./ProductCarousel";
+import ProductInfo from "./ProductInfo";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <ProductCarousel />
-      
+      <ProductInfo />
+
     </>
   );
 }

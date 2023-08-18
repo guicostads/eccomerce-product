@@ -23,7 +23,7 @@ const ProductCarousel = () => {
   return (
     <div className="w-full relative">
       <img src={images[currentImageIndex]} alt="product" />
-      <div className="absolute inset-0 flex items-center justify-between">
+      <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
           className="border rounded-full p-2 bg-white"
           onClick={() => handleImageChange(currentImageIndex - 1)}
