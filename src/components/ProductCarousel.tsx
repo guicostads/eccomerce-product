@@ -21,17 +21,21 @@ const ProductCarousel = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center relative">
+    <div className="w-full relative">
       <img src={images[currentImageIndex]} alt="product" />
-      <div className="absolute">
-        <div className="flex justify-between">
-            <button onClick={() => handleImageChange(currentImageIndex - 1)}>
-              Previous
-            </button>
-            <button onClick={() => handleImageChange(currentImageIndex + 1)}>
-              Next
-            </button>
-        </div>
+      <div className="absolute inset-0 flex items-center justify-between">
+        <button
+          className="border rounded-full p-2 bg-white"
+          onClick={() => handleImageChange(currentImageIndex - 1)}
+        >
+          ◀
+        </button>
+        <button
+          className="border rounded-full p-2 bg-white"
+          onClick={() => handleImageChange(currentImageIndex + 1)}
+        >
+          ▶
+        </button>
       </div>
     </div>
   );
