@@ -2,6 +2,7 @@ import React from "react";
 import ProductCarousel from "./ProductCarousel";
 import Prices from "./Prices";
 import ProductCounter from "./ProductCounter";
+import AddToCartButton from "./AddToCartButton";
 
 const ProductInfo = () => {
   return (
@@ -22,6 +23,7 @@ const ProductInfo = () => {
         </p>
         <Prices />
         <ProductCounter />
+        <AddToCartButton />
       </div>
     </>
   );
