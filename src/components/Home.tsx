@@ -7,9 +7,8 @@ const Home = () => {
     <>
       <Header />
       <ProductInfo />
-
     </>
   );
-}
+};
 
 export default Home;
