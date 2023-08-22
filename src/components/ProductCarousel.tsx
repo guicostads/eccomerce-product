@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+
 import Image1 from "../images/image-product-1.jpg";
 import Image2 from "../images/image-product-2.jpg";
 import Image3 from "../images/image-product-3.jpg";
@@ -25,16 +27,16 @@ const ProductCarousel = () => {
       <img src={images[currentImageIndex]} alt="product" />
       <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
-          className="border rounded-full p-2 bg-white"
+          className="border rounded-full p-3 bg-white"
           onClick={() => handleImageChange(currentImageIndex - 1)}
         >
-          ◀
+          <CaretLeft weight="bold"/>
         </button>
         <button
-          className="border rounded-full p-2 bg-white"
+          className="border rounded-full p-3 bg-white"
           onClick={() => handleImageChange(currentImageIndex + 1)}
         >
-          ▶
+          <CaretRight weight="bold" />
         </button>
       </div>
     </div>
