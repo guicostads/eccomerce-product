@@ -1,32 +1,12 @@
-import React, { useState, useEffect } from "react";
 import HeaderMobile from "./HeaderMobile";
 import HeaderDesktop from "./HeaderDesktop";
+import { useResponsiveLayout } from "../customHooks/useResponsiveLayout";
 
 function Header() {
-  const [currentHeaderLayout, setCurrentHeaderLayout] =
-    useState<JSX.Element | null>(null);
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      const mobileBreakpoint = 768;
-
-      if (screenWidth <= mobileBreakpoint) {
-        setCurrentHeaderLayout(<HeaderMobile />);
-      } else {
-        setCurrentHeaderLayout(<HeaderDesktop />);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return <>{currentHeaderLayout}</>;
+  const mobileComponent = <HeaderMobile />;
+  const desktopComponent = <HeaderDesktop />;
+  const currentLayout = useResponsiveLayout(mobileComponent, desktopComponent);
+  return <>{currentLayout}</>;
 }
 
 export default Header;
