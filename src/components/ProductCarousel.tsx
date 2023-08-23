@@ -20,6 +20,7 @@ const ProductCarousel = () => {
     }
 
     setCurrentImageIndex(newIndexInRange);
+    console.log(currentImageIndex)
   };
 
   return (
@@ -30,7 +31,7 @@ const ProductCarousel = () => {
           className="border rounded-full p-3 bg-white"
           onClick={() => handleImageChange(currentImageIndex - 1)}
         >
-          <CaretLeft weight="bold"/>
+          <CaretLeft weight="bold" />
         </button>
         <button
           className="border rounded-full p-3 bg-white"

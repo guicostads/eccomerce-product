@@ -3,7 +3,8 @@ import { useState } from "react";
 import Logo from "../images/logo.svg";
 import Avatar from "../images/image-avatar.png";
 import Cart from "../images/icon-cart.svg";
-import { List, X } from "@phosphor-icons/react";
+import { List } from "@phosphor-icons/react";
+import MenuModal from "./MenuModal";
 
 const HeaderMobile = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,28 +34,7 @@ const HeaderMobile = () => {
             <img src={Avatar} alt="avatar" className="w-[1.5rem]" />
           </div>
         </div>
-        {isMenuOpen && (
-          <>
-            <div
-              className="fixed top-0 left-0 z-40 w-screen h-screen bg-black opacity-40"
-              onClick={() => setIsMenuOpen(false)}
-            ></div>
-            <div className="fixed top-0 left-0 z-50  min-h-screen p-4 bg-white">
-              <ul className="flex flex-col  gap-2 bg-white w-[12rem]">
-                <button
-                  onClick={() => setIsMenuOpen(false)}
-                  className="mb-4 text-left"
-                >
-                  <X />
-                </button>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-          </>
-        )}
+        <MenuModal isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>
     </div>
   );
