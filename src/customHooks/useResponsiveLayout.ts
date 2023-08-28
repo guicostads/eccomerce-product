@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-type ComponentType = React.ReactNode;
+type ComponentType = () => JSX.Element
 
 export function useResponsiveLayout(
   mobileComponent: ComponentType,
   desktopComponent: ComponentType,
   mobileBreakpoint = 768
 ): ComponentType {
-  const [currentLayout, setCurrentLayout] = useState<ComponentType | null>(null);
+  const [currentLayout, setCurrentLayout] = useState<ComponentType | null>(
+    null
+  );
 
   useEffect(() => {
     const handleResize = () => {

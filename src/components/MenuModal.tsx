@@ -13,6 +13,7 @@ const MenuModal = ({ isMenuOpen, setIsMenuOpen }: ModalProps) => {
         <>
           <div className="fixed top-0 left-0 z-40 w-screen h-screen bg-black opacity-40"></div>
           <div className="fixed top-0 left-0 z-50  min-h-screen p-4 bg-white">
+            <nav>
             <ul className="flex flex-col  gap-2 bg-white w-[12rem]">
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -36,6 +37,7 @@ const MenuModal = ({ isMenuOpen, setIsMenuOpen }: ModalProps) => {
                 Contact
               </li>
             </ul>
+            </nav>
           </div>
         </>
       )}

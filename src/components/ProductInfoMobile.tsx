@@ -15,7 +15,7 @@ const ProductInfoMobile = () => {
         <h1 className="font-semibold mb-1 leading-9 text-[2.2rem]">
           Fall Limited Edition Sneakers
         </h1>
-        <p className="leading-none text-gray-500 font-regular text-justify">
+        <p className="leading-none text-gray-500 font-regular text-justify py-1">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
           perspiciatis quibusdam, ex rerum ad doloribus aspernatur? Sint commodi
           obcaecati vitae labore, beatae asperiores voluptates, enim
