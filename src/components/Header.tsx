@@ -1,10 +1,17 @@
 import HeaderMobile from "./HeaderMobile";
 import HeaderDesktop from "./HeaderDesktop";
-import { useResponsiveLayout } from "../customHooks/useResponsiveLayout";
 
 function Header() {
-  const currentLayout = useResponsiveLayout(HeaderMobile, HeaderDesktop);
-  return <>{currentLayout}</>;
+  return (
+    <>
+      <div className="max-md:block md:hidden">
+        <HeaderMobile />
+      </div>
+      <div className="max-md:hidden md:block">
+        <HeaderDesktop />
+      </div>
+    </>
+  );
 }
 
 export default Header;

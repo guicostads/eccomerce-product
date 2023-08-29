@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import Logo from "../images/logo.svg";
 import Avatar from "../images/image-avatar.png";
