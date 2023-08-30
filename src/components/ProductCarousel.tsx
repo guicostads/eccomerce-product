@@ -22,14 +22,15 @@ const ProductCarousel = () => {
     setCurrentImageIndex(newIndexInRange);
   };
 
-
   return (
-    <div className="w-full max-md:relative">
-      <img
-        src={images[currentImageIndex]}
-        alt="product"
-        className="md:rounded-md min-w-full"
-      />
+    <div className="max-md:w-full max-md:relative">
+      <div className="w-full flex items-center justify-center md:p-7">
+        <img
+          src={images[currentImageIndex]}
+          alt="product"
+          className="md:rounded-md"
+        />
+      </div>
       <div className="absolute inset-0 flex items-center justify-between px-4 md:hidden">
         <button
           className="border rounded-full p-3 bg-white"

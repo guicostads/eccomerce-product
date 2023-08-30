@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Plus from "../images/icon-plus.svg";
+import Minus from "../images/icon-minus.svg";
 
 const ProductCounter = () => {
   const [productCount, setProductCount] = useState<number>(0);
@@ -13,10 +15,14 @@ const ProductCounter = () => {
   };
 
   return (
-    <div className="w-full flex justify-between bg-gray-100 p-3 rounded font-semibold text-lg">
-      <button className="text-orange-400" onClick={decreaseCount}>-</button>
+    <div className="w-full md:w-1/2 flex justify-between bg-gray-100 p-3 rounded font-semibold text-lg">
+      <button className="text-orange-400" onClick={decreaseCount}>
+        <img src={Minus} alt="minus sign" />
+      </button>
       <span>{productCount}</span>
-      <button className="text-orange-400" onClick={increaseCount}>+</button>
+      <button className="text-orange-400" onClick={increaseCount}>
+        <img src={Plus} alt="plus sign" />
+      </button>
     </div>
   );
 };
